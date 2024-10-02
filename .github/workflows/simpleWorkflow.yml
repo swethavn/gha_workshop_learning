@@ -1,0 +1,17 @@
+name: workflow overview
+
+on:
+  workflow_dispatch:
+
+jobs:
+  a_simple_job:
+    name: my simple job name
+    runs-on: ubuntu-latest
+    steps:
+      - name: step name
+        id: stepId
+        run: echo "first step of the first job"
+      - name: step with a shell
+        id: shellStep
+        shell: python
+        run: print("this is the shell step")
