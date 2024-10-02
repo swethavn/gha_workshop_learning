@@ -2,11 +2,13 @@ name: workflow overview
 
 on:
   workflow_dispatch:
-
+  push:
+    branches:
+        -main
 jobs:
   a_simple_job:
     name: my simple job name
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: step name
         id: stepId
